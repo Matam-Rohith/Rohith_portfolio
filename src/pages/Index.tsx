@@ -1,5 +1,5 @@
-
 import { useEffect } from 'react';
+import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
 import ThemeToggle from '@/components/ThemeToggle';
 import Hero from '@/components/Hero';
@@ -13,7 +13,6 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Initialize scroll animations
     const handleScroll = () => {
       const elements = document.querySelectorAll('.animate-on-scroll:not(.visible)');
       
@@ -35,10 +34,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <Header />
       <Navigation />
       <ThemeToggle />
       
-      <main>
+      <main className="pt-16"> {/* Added padding-top to account for fixed header */}
         <Hero />
         <About />
         <Skills />
