@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -26,12 +25,21 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "E-Commerce Website",
+      description: "A full-featured e-commerce platform built with modern web technologies, featuring product catalog, shopping cart, and responsive design.",
+      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/Matam-Rohith/E-Commerce-Website",
+      demo: "https://shoplane-by-lassie.netlify.app/",
+      tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      color: "blue"
+    },
+    {
       title: "Cancer Prediction",
       description: "Applied machine learning techniques to predict cancer risk, showcasing skills in data analysis, model building, and deployment.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1HG-RnSINNeMfyDf1-JyQjGsfBIhwq8vtrw&s",
       github: "https://github.com/Matam-Rohith/AIML-LABS/blob/main/Cancer%20Prediction.ipynb",
       tags: ["Python", "Machine Learning", "Data Analysis"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "Smart Car Parking System",
@@ -39,7 +47,7 @@ const Projects = () => {
       image: "https://www.electroduino.com/wp-content/uploads/2021/11/Smart-Parking-System-Project-using-Arduino-and-IR-Sensor.png",
       demo: "https://drive.google.com/drive/folders/1LZD9eOQ0Dppm9OqawQy2y9vvebHRpe18",
       tags: ["Arduino", "IoT", "Sensors"],
-      color: "purple"
+      color: "green"
     },
     {
       title: "SMS Spam Detection",
@@ -47,7 +55,7 @@ const Projects = () => {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRutBzJUJ6hNDqFQwxlM8Pw_FundmolljaTeA&s",
       github: "https://github.com/Matam-Rohith/NLP/blob/main/sms_spam_detection_nlp.ipynb",
       tags: ["Python", "NLP", "Machine Learning"],
-      color: "green"
+      color: "red"
     },
     {
       title: "Bank Management System",
@@ -55,7 +63,7 @@ const Projects = () => {
       image: "https://code-projects.org/wp-content/uploads/2018/06/Screenshot-4480000.png",
       github: "https://github.com/Matam-Rohith/Bank-Management-system",
       tags: ["C", "File Handling", "Data Structures"],
-      color: "red"
+      color: "blue"
     },
     {
       title: "Personal Budget Tracker",
@@ -64,7 +72,7 @@ const Projects = () => {
       github: "https://github.com/Matam-Rohith/personal_budget_tracker",
       demo: "https://drive.google.com/file/d/1Qn3TDdZuQhSy1FOtNEYqqewJtcLzC4ze/view?usp=drive_link",
       tags: ["HTML", "CSS", "JavaScript", "AngularJS"],
-      color: "blue"
+      color: "purple"
     }
   ];
 
