@@ -28,7 +28,7 @@ const Hero = () => {
           <div className={`lg:w-1/2 w-full flex items-center justify-center transition-all duration-1000 ${isVisible ? 'animate-scale-in' : ''} order-1 lg:order-1`} style={{ animationDelay: '0.3s' }}>
             <div className="w-80 h-[400px] lg:w-[360px] lg:h-[450px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-3">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/lovable-uploads/pro copy copy.jpg"
                 alt="Matam Rohith"
                 className="w-full h-full object-cover rounded-xl"
               />
