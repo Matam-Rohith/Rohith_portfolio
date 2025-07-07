@@ -31,9 +31,9 @@ const Hero = () => {
                 <img
                   src="/lovable-uploads/pro copy copy.jpg"
                   alt="Matam Rohith"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
                   style={{
-                    objectPosition: 'center top'
+                    objectPosition: 'center 10%'
                   }}
                 />
               </div>
