@@ -26,12 +26,17 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 min-h-screen">
           {/* Profile Image - Left Side */}
           <div className={`lg:w-1/2 w-full flex items-center justify-center transition-all duration-1000 ${isVisible ? 'animate-scale-in' : ''} order-1 lg:order-1`} style={{ animationDelay: '0.3s' }}>
-            <div className="w-80 h-[400px] lg:w-[360px] lg:h-[450px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-3">
-              <img
-                src="/lovable-uploads/pro copy copy.jpg"
-                alt="Matam Rohith"
-                className="w-full h-full object-cover rounded-xl"
-              />
+            <div className="w-80 h-[480px] lg:w-[380px] lg:h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4 overflow-hidden">
+              <div className="w-full h-full rounded-xl overflow-hidden">
+                <img
+                  src="/lovable-uploads/pro copy copy.jpg"
+                  alt="Matam Rohith"
+                  className="w-full h-full object-cover object-top"
+                  style={{
+                    objectPosition: 'center top'
+                  }}
+                />
+              </div>
             </div>
           </div>
 
