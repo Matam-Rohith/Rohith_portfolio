@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="w-80 h-[480px] lg:w-[380px] lg:h-[500px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4 overflow-hidden">
               <div className="w-full h-full rounded-xl overflow-hidden">
                 <img
-                  src="/lovable-uploads/pro copy copy.jpg"
+                  src="/lovable-uploads/white profile.jpg"
                   alt="Matam Rohith"
                   className="w-full h-full object-cover"
                   style={{
