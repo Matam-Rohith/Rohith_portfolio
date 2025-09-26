@@ -139,7 +139,7 @@ const Contact = () => {
               {/* Resume Download */}
               <Button 
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                onClick={() => window.open('https://drive.google.com/file/d/1iasT2idG_Sal1YDehiyxCiUo2Eqm4nvT/view?usp=drive_link', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1YKx8yX2bSmVgDvPCjXMaz7urIvatyjb_/view?usp=sharing', '_blank')}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
