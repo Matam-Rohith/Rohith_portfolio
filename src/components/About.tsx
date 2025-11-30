@@ -76,7 +76,7 @@ const About = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900 dark:text-white text-sm">Academic Excellence</div>
-                      <div className="text-gray-600 dark:text-gray-300 text-xs">CGPA: 7.30+</div>
+                      <div className="text-gray-600 dark:text-gray-300 text-xs">CGPA: 7.04+</div>
                     </div>
                   </div>
 
