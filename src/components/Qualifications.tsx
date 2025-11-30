@@ -37,7 +37,7 @@ const Qualifications = () => {
       institution: "SR Prime School",
       duration: "2020 - 2022",
       subjects: "Physics, Chemistry, Maths, English Core, Physical Education",
-      score: "83%",
+      score: "75.2%",
       icon: "📚"
     },
     {
@@ -45,7 +45,7 @@ const Qualifications = () => {
       institution: "Millennium High School",
       duration: "2019 - 2020",
       subjects: "Science, Maths, English, Social Studies, Telugu",
-      score: "83%",
+      score: "71.4%",
       icon: "📖"
     }
   ];
