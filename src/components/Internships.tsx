@@ -24,6 +24,23 @@ const Internships = () => {
 
   const internships = [
     {
+      position: "Web Full Stack Intern",
+      company: "Internvision",
+      duration: "January 2026 – April 2026",
+      location: "Remote",
+      description:
+        "Currently working as a Web Full Stack Intern, gaining hands-on experience in building full-stack web applications and understanding real-world development workflows.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Backend Basics"
+      ],
+      certificate: "",
+      icon: "💼",
+    },
+    {
       position: "AI-ML Virtual Intern",
       company: "EduSkills Foundation (AICTE – National Internship Portal)",
       duration: "January 2025 – March 2025",
@@ -47,38 +64,14 @@ const Internships = () => {
       location: "India (Virtual)",
       description:
         "Completed a 10-week Cloud Virtual Internship, gaining hands-on exposure to cloud fundamentals, core services, and deployment basics through AWS Academy–aligned labs.",
-      technologies: ["AWS | Cloud Computing | Cloud Infrastructure | Linux Basics"],
-      certificate: "https://drive.google.com/file/d/1ZYLiim1DxtAYS8f9r7Pa2Y3aRRRzK0JM/view?usp=drive_link",
-      icon: "💼",
-    },
-    {
-      position: "Cloud Computing Intern",
-      company: "Organization / Platform Name",
-      duration: "Month Year – Month Year",
-      location: "Remote",
-      description:
-        "Learned core cloud concepts and gained practical exposure to cloud services and deployment basics.",
       technologies: [
         "AWS",
         "Cloud Computing",
-        "Linux"
+        "Cloud Infrastructure",
+        "Linux Basics"
       ],
-      certificate: "",
-      icon: "💼",
-    },
-    {
-      position: "Cyber Security Intern",
-      company: "Organization / Platform Name",
-      duration: "Month Year – Month Year",
-      location: "Remote",
-      description:
-        "Understood cybersecurity fundamentals, networking concepts, and basic security tools through hands-on learning.",
-      technologies: [
-        "Cyber Security",
-        "Networking",
-        "Security Tools"
-      ],
-      certificate: "",
+      certificate:
+        "https://drive.google.com/file/d/1ZYLiim1DxtAYS8f9r7Pa2Y3aRRRzK0JM/view?usp=sharing",
       icon: "💼",
     },
   ];
