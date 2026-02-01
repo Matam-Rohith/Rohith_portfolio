@@ -74,6 +74,14 @@ const Projects = () => {
       tags: ["HTML", "CSS", "JavaScript", "AngularJS"],
       color: "purple"
     }
+        {
+      title: "URL Shortener",
+      description: "A simple web app that converts long URLs into short, shareable links with instant redirection.",
+      image: "https://code-projects.org/wp-content/uploads/2018/06/Screenshot-4480000.png",
+      github: "https://github.com/Matam-Rohith/URL_Shortener",
+      tags: ["HTML", "CSS", "JavaScript"],
+      color: "blue"
+    },
   ];
 
   const colorClasses = {
