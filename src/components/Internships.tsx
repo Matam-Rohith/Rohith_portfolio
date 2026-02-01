@@ -28,7 +28,7 @@ const Internships = () => {
     company: "EduSkills Foundation (AICTE – National Internship Portal)",
     duration: "January 2025 – March 2025",
     location: "India (Virtual)",
-    description: "Completed a 10-week AI-ML virtual internship focused on ML fundamentals.",
+    description: "Completed a 10-week AI-ML virtual internship, gaining hands-on experience in data preprocessing, basic machine learning models, and real-world AI concepts through AWS Academy–aligned coursework.",
     technologies: ["Python | Machine Learning | Data Preprocessing | AWS Academy"],
     certificate: "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=drive_link",
     icon: "💼"
