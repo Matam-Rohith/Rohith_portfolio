@@ -36,7 +36,7 @@ const Internships = () => {
   ];
 
   return (
-    <section id="internships" ref={sectionRef} className="py-16 bg-gray-50 dark:bg-gray-800">
+    <section id="Internships" ref={sectionRef} className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-on-scroll">
