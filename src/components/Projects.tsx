@@ -93,14 +93,14 @@ const Projects = () => {
         color: "green"
      },
     
-     {
-     title: "Task Management System",
-    description: "A task management web app to add, update, delete, and track daily tasks efficiently.",
-    image:"https:"https://assets.plan.io/images/blog/what-is-task-management.png",
-    github:"https://github.com/Matam-Rohith/Task_Management",
-    tags: ["HTML", "CSS", "JavaScript"],
-    color: "red"
-      }
+   {
+        title: "Task Management System",
+        description:"A task management web app to add, update, delete, and track daily tasks efficiently.",
+        image: "https://assets.plan.io/images/blog/what-is-task-management.png",
+        github: "https://github.com/Matam-Rohith/Task_Management",
+        tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
+        color: "green"
+     },
   ];
 
   const colorClasses = {
