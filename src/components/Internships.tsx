@@ -22,16 +22,19 @@ const Internships = () => {
     return () => observer.disconnect();
   }, []);
 
-  const internships = [
-    {
-      position: "AI-ML Virtual Intern",
-      company: "EduSkills Foundation (AICTE – National Internship Portal)",
-      duration: "January 2025 – March 2025",
-      location: "India (Virtual)",
-      description: "Completed a 10-week AI-ML virtual internship focused on building core machine learning fundamentals. Learned how to preprocess data, train basic ML models, and understand real-world AI use cases. Gained hands-on exposure through guided labs and coursework aligned with industry standards. The curriculum was provided by AWS Academy.",
-      technologies: ["Python | Machine Learning | Data Preprocessing | AWS Academy (AI/ML Basics)"],
-      icon: "💼"
-    },
+ const internships = [
+  {
+    position: "AI-ML Virtual Intern",
+    company: "EduSkills Foundation (AICTE – National Internship Portal)",
+    duration: "January 2025 – March 2025",
+    location: "India (Virtual)",
+    description: "Completed a 10-week AI-ML virtual internship focused on ML fundamentals.",
+    technologies: ["Python | Machine Learning | Data Preprocessing | AWS Academy"],
+    certificate: "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=drive_link",
+    icon: "💼"
+  },
+];
+
     // Add more internships here
   ];
 
