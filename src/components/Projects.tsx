@@ -81,7 +81,7 @@ const Projects = () => {
       github: "https://github.com/Matam-Rohith/URL_Shortener",
       tags: ["HTML", "CSS", "JavaScript"],
       color: "blue"
-    },
+    }
   ];
 
   const colorClasses = {
