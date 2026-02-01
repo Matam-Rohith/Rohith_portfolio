@@ -64,7 +64,7 @@ const Hero = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full hover:scale-105 hover:shadow-lg text-sm"
                 onClick={() =>
                   window.open(
-                    'https://drive.google.com/file/d/1YKx8yX2bSmVgDvPCjXMaz7urIvatyjb_/view?usp=sharing',
+                    'https://drive.google.com/file/d/1wQJNyAuuA6tbAlyeS4c0HW4Q2RRjCYJO/view?usp=sharing',
                     '_blank'
                   )
                 }
