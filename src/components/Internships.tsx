@@ -40,6 +40,52 @@ const Internships = () => {
         "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=sharing",
       icon: "💼",
     },
+    {
+      position: "Web Development Intern",
+      company: "Organization / Platform Name",
+      duration: "Month Year – Month Year",
+      location: "Remote",
+      description:
+        "Worked on building responsive web pages and improving frontend functionality using modern web technologies.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      certificate: "",
+      icon: "💼",
+    },
+    {
+      position: "Cloud Computing Intern",
+      company: "Organization / Platform Name",
+      duration: "Month Year – Month Year",
+      location: "Remote",
+      description:
+        "Learned core cloud concepts and gained practical exposure to cloud services and deployment basics.",
+      technologies: [
+        "AWS",
+        "Cloud Computing",
+        "Linux"
+      ],
+      certificate: "",
+      icon: "💼",
+    },
+    {
+      position: "Cyber Security Intern",
+      company: "Organization / Platform Name",
+      duration: "Month Year – Month Year",
+      location: "Remote",
+      description:
+        "Understood cybersecurity fundamentals, networking concepts, and basic security tools through hands-on learning.",
+      technologies: [
+        "Cyber Security",
+        "Networking",
+        "Security Tools"
+      ],
+      certificate: "",
+      icon: "💼",
+    },
   ];
 
   return (
@@ -56,7 +102,7 @@ const Internships = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              My professional internship experience
+              My internship and practical learning experience
             </p>
           </div>
 
@@ -104,7 +150,6 @@ const Internships = () => {
                         ))}
                       </div>
 
-                      {/* Certificate Button */}
                       {internship.certificate && (
                         <a
                           href={internship.certificate}
