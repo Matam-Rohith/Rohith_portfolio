@@ -41,19 +41,14 @@ const Internships = () => {
       icon: "💼",
     },
     {
-      position: "Web Development Intern",
-      company: "Organization / Platform Name",
-      duration: "Month Year – Month Year",
-      location: "Remote",
+      position: "Cloud Virtual Intern",
+      company: "EduSkills Foundation (AICTE – National Internship Portal)",
+      duration: "July 2024 – September 2024",
+      location: "India (Virtual)",
       description:
-        "Worked on building responsive web pages and improving frontend functionality using modern web technologies.",
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React"
-      ],
-      certificate: "",
+        "Completed a 10-week Cloud Virtual Internship, gaining hands-on exposure to cloud fundamentals, core services, and deployment basics through AWS Academy–aligned labs.",
+      technologies: ["AWS | Cloud Computing | Cloud Infrastructure | Linux Basics"],
+      certificate: "https://drive.google.com/file/d/1ZYLiim1DxtAYS8f9r7Pa2Y3aRRRzK0JM/view?usp=drive_link",
       icon: "💼",
     },
     {
