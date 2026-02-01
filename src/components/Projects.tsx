@@ -83,7 +83,6 @@ const Projects = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       color: "blue"
     },
-    {
       {
         title: "Notes Web App",
         description:"A lightweight notes application to create, edit, and delete notes using browser local storage.",
@@ -92,9 +91,7 @@ const Projects = () => {
         demo: "https://notes-app-zeta-ruddy.vercel.app/",
         tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
         color: "green"
-}
-
-    
+     }  
   ];
 
   const colorClasses = {
