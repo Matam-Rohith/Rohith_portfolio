@@ -48,8 +48,7 @@ const Hero = () => {
               Computer Science Engineering Student
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-xl">
-              Passionate about technology, machine learning, and web development.
-              Always eager to learn and contribute to innovative projects.
+              Computer Science Engineering student focused on machine learning and web development, with hands-on project experience and a strong desire to build practical, scalable solutions.
             </p>
 
             {/* Buttons */}
