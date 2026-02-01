@@ -82,7 +82,19 @@ const Projects = () => {
       demo: "https://url-shortener-na16.onrender.com/",
       tags: ["HTML", "CSS", "JavaScript"],
       color: "blue"
-    }
+    },
+    {
+      {
+        title: "Notes Web App",
+        description:"A lightweight notes application to create, edit, and delete notes using browser local storage.",
+        image: "https://cdn.dribbble.com/users/1787323/screenshots/16061389/media/7d62c6cf6b8a7baf1dfaa2eea5a98193.png",
+        github: "https://github.com/Matam-Rohith/notes-app",
+        demo: "https://notes-app-zeta-ruddy.vercel.app/",
+        tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
+        color: "green"
+}
+
+    
   ];
 
   const colorClasses = {
