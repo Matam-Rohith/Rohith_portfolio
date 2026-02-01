@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const Internships = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,24 +22,32 @@ const Internships = () => {
     return () => observer.disconnect();
   }, []);
 
- const internships = [
-  {
-    position: "AI-ML Virtual Intern",
-    company: "EduSkills Foundation (AICTE – National Internship Portal)",
-    duration: "January 2025 – March 2025",
-    location: "India (Virtual)",
-    description: "Completed a 10-week AI-ML virtual internship, gaining hands-on experience in data preprocessing, basic machine learning models, and real-world AI concepts through AWS Academy–aligned coursework.",
-    technologies: ["Python | Machine Learning | Data Preprocessing | AWS Academy"],
-    certificate: "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=drive_link",
-    icon: "💼"
-  },
-];
-
-    // Add more internships here
+  const internships = [
+    {
+      position: "AI-ML Virtual Intern",
+      company: "EduSkills Foundation (AICTE – National Internship Portal)",
+      duration: "January 2025 – March 2025",
+      location: "India (Virtual)",
+      description:
+        "Completed a 10-week AI-ML virtual internship, gaining hands-on experience in data preprocessing, basic machine learning models, and real-world AI concepts through AWS Academy–aligned coursework.",
+      technologies: [
+        "Python",
+        "Machine Learning",
+        "Data Preprocessing",
+        "AWS Academy"
+      ],
+      certificate:
+        "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=sharing",
+      icon: "💼",
+    },
   ];
 
   return (
-    <section id="Internships" ref={sectionRef} className="py-16 bg-gray-50 dark:bg-gray-800">
+    <section
+      id="internships"
+      ref={sectionRef}
+      className="py-16 bg-gray-50 dark:bg-gray-800"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-on-scroll">
@@ -47,19 +55,19 @@ const Internships = () => {
               💼 <span className="text-gradient">Internships</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               My professional internship experience
             </p>
           </div>
 
           <div className="space-y-8">
             {internships.map((internship, index) => (
-              <div 
+              <div
                 key={index}
                 className="animate-on-scroll"
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover-lift border-l-4 border-blue-500">
+                <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg border-l-4 border-blue-500">
                   <div className="flex items-start gap-4">
                     <span className="text-3xl">{internship.icon}</span>
                     <div className="flex-1">
@@ -69,6 +77,7 @@ const Internships = () => {
                       <p className="text-blue-600 dark:text-blue-400 font-semibold">
                         {internship.company}
                       </p>
+
                       <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-600 dark:text-gray-300">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
@@ -79,22 +88,40 @@ const Internships = () => {
                           {internship.location}
                         </div>
                       </div>
-                      <p className="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+
+                      <p className="mt-4 text-gray-600 dark:text-gray-300">
                         {internship.description}
                       </p>
+
                       <div className="flex flex-wrap gap-2 mt-4">
                         {internship.technologies.map((tech, i) => (
-                          <span key={i} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium">
+                          <span
+                            key={i}
+                            className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium"
+                          >
                             {tech}
                           </span>
                         ))}
                       </div>
+
+                      {/* Certificate Button */}
+                      {internship.certificate && (
+                        <a
+                          href={internship.certificate}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-4 text-blue-600 dark:text-blue-400 underline"
+                        >
+                          View Certificate
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
