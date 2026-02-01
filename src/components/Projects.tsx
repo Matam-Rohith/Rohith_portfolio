@@ -79,6 +79,7 @@ const Projects = () => {
       description: "A simple web app that converts long URLs into short, shareable links with instant redirection.",
       image: "https://miro.medium.com/1*Pdw7h5X6vQQNVopIzHBG6A.jpeg",
       github: "https://github.com/Matam-Rohith/URL_Shortener",
+      demo: "https://url-shortener-na16.onrender.com/",
       tags: ["HTML", "CSS", "JavaScript"],
       color: "blue"
     }
