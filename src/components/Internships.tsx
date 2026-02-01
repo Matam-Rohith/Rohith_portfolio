@@ -24,12 +24,12 @@ const Internships = () => {
 
   const internships = [
     {
-      position: "Your Position Title",
-      company: "Company Name",
-      duration: "Month Year - Month Year",
-      location: "City, Country",
-      description: "What you did and learned during this internship",
-      technologies: ["Tech1", "Tech2", "Tech3"],
+      position: "AI-ML Virtual Intern",
+      company: "EduSkills Foundation (AICTE – National Internship Portal)",
+      duration: "January 2025 – March 2025",
+      location: "India (Virtual)",
+      description: "Completed a 10-week AI-ML virtual internship focused on building core machine learning fundamentals. Learned how to preprocess data, train basic ML models, and understand real-world AI use cases. Gained hands-on exposure through guided labs and coursework aligned with industry standards. The curriculum was provided by AWS Academy.",
+      technologies: ["Python | Machine Learning | Data Preprocessing | AWS Academy (AI/ML Basics)"],
       icon: "💼"
     },
     // Add more internships here
