@@ -24,18 +24,15 @@ const Internships = () => {
 
   const internships = [
     {
-      position: "Web Full Stack Intern",
-      company: "Internvision",
-      duration: "January 2026 – April 2026",
+      position: "LLM-Intern",
+      company: "Ethara.ai",
+      duration: "February 2026 – Present",
       location: "Remote",
       description:
-        "Currently working as a Web Full Stack Intern, gaining hands-on experience in building full-stack web applications and understanding real-world development workflows.",
+        "Currently working as an LLM Intern, gaining hands-on experience in building and optimizing large language model applications, developing AI-driven solutions, and understanding real-world workflows in generative AI and natural language processing.",
       technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Backend Basics"
+        "Large Language Models (LLMs)",
+        
       ],
       certificate: "",
       icon: "💼",
