@@ -98,7 +98,7 @@ const Projects = () => {
       description:"A task management web app to add, update, delete, and track daily tasks efficiently.",
       image: "https://assets.plan.io/images/blog/what-is-task-management.png",
       github: "https://github.com/Matam-Rohith/Task_Management",
-      demo: "https://your-task-app.vercel.app",
+      demo: "https://matam-rohith.github.io/Task_Management/",
       tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
       color: "green"
     },
