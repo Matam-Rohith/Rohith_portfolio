@@ -54,6 +54,7 @@ const Projects = () => {
       description: "Implemented in Python using NLP techniques to classify SMS messages as spam or non-spam with high accuracy.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRutBzJUJ6hNDqFQwxlM8Pw_FundmolljaTeA&s",
       github: "https://github.com/Matam-Rohith/NLP/blob/main/sms_spam_detection_nlp.ipynb",
+      demo: "https://mamfegbtbyckxtr4ncu3nq.streamlit.app/",
       tags: ["Python", "NLP", "Machine Learning"],
       color: "red"
     },
@@ -83,24 +84,24 @@ const Projects = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       color: "blue"
     },
-      {
-        title: "Notes Web App",
-        description:"A lightweight notes application to create, edit, and delete notes using browser local storage.",
-        image: "https://cdn.dribbble.com/userupload/36551899/file/original-301dbd7522ac64fb5b3f4d59eb3eee34.jpg?resize=400x0",
-        github: "https://github.com/Matam-Rohith/notes-app",
-        demo: "https://notes-app-zeta-ruddy.vercel.app/",
-        tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
-        color: "green"
-     },
-    
-   {
-        title: "Task Management System",
-        description:"A task management web app to add, update, delete, and track daily tasks efficiently.",
-        image: "https://assets.plan.io/images/blog/what-is-task-management.png",
-        github: "https://github.com/Matam-Rohith/Task_Management",
-        tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
-        color: "green"
-     },
+    {
+      title: "Notes Web App",
+      description:"A lightweight notes application to create, edit, and delete notes using browser local storage.",
+      image: "https://cdn.dribbble.com/userupload/36551899/file/original-301dbd7522ac64fb5b3f4d59eb3eee34.jpg?resize=400x0",
+      github: "https://github.com/Matam-Rohith/notes-app",
+      demo: "https://notes-app-zeta-ruddy.vercel.app/",
+      tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
+      color: "green"
+    },
+    {
+      title: "Task Management System",
+      description:"A task management web app to add, update, delete, and track daily tasks efficiently.",
+      image: "https://assets.plan.io/images/blog/what-is-task-management.png",
+      github: "https://github.com/Matam-Rohith/Task_Management",
+      demo: "https://your-task-app.vercel.app",
+      tags: ["JavaScript", "LocalStorage", "HTML", "CSS"],
+      color: "green"
+    },
   ];
 
   const colorClasses = {
