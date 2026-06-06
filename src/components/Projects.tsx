@@ -34,6 +34,24 @@ const Projects = () => {
       color: "blue"
     },
     {
+      title: "Student Dashboard",
+      description: "A clean, fully client-side Student Dashboard with GPA Calculator, Attendance Tracker, and Timetable Manager. All data stored in browser localStorage — no backend required.",
+      image: "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/Matam-Rohith/student-dashboard",
+      demo: "https://matam-rohith.github.io/student-dashboard/",
+      tags: ["HTML", "CSS", "JavaScript", "LocalStorage"],
+      color: "blue"
+    },
+    {
+      title: "TalentFlow HRM",
+      description: "A comprehensive Human Resource Management System for employee lifecycle management — from onboarding to payroll, with analytics and attendance tracking.",
+      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/Matam-Rohith/TalentFlow-HRM",
+      demo: "https://matam-rohith.github.io/TalentFlow-HRM/",
+      tags: ["HTML", "CSS", "JavaScript", "Chart.js"],
+      color: "purple"
+    },
+    {
       title: "Cancer Prediction",
       description: "Applied machine learning techniques to predict cancer risk, showcasing skills in data analysis, model building, and deployment.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1HG-RnSINNeMfyDf1-JyQjGsfBIhwq8vtrw&s",
@@ -86,7 +104,7 @@ const Projects = () => {
     },
     {
       title: "Notes Web App",
-      description:"A lightweight notes application to create, edit, and delete notes using browser local storage.",
+      description: "A lightweight notes application to create, edit, and delete notes using browser local storage.",
       image: "https://cdn.dribbble.com/userupload/36551899/file/original-301dbd7522ac64fb5b3f4d59eb3eee34.jpg?resize=400x0",
       github: "https://github.com/Matam-Rohith/notes-app",
       demo: "https://notes-app-zeta-ruddy.vercel.app/",
@@ -95,7 +113,7 @@ const Projects = () => {
     },
     {
       title: "Task Management System",
-      description:"A task management web app to add, update, delete, and track daily tasks efficiently.",
+      description: "A task management web app to add, update, delete, and track daily tasks efficiently.",
       image: "https://assets.plan.io/images/blog/what-is-task-management.png",
       github: "https://github.com/Matam-Rohith/Task_Management",
       demo: "https://matam-rohith.github.io/Task_Management/",
@@ -127,7 +145,7 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={project.title}
                 className="animate-on-scroll group"
                 style={{ animationDelay: `${index * 0.2}s` }}
@@ -135,8 +153,8 @@ const Projects = () => {
                 <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover-lift">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -144,9 +162,9 @@ const Projects = () => {
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex gap-3">
                         {project.github && (
-                          <a 
-                            href={project.github} 
-                            target="_blank" 
+                          <a
+                            href={project.github}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 bg-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
                           >
@@ -154,9 +172,9 @@ const Projects = () => {
                           </a>
                         )}
                         {project.demo && (
-                          <a 
-                            href={project.demo} 
-                            target="_blank" 
+                          <a
+                            href={project.demo}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 bg-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
                           >
@@ -179,7 +197,7 @@ const Projects = () => {
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {project.tags.map((tag) => (
-                        <span 
+                        <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
                         >
@@ -191,8 +209,8 @@ const Projects = () => {
                     {/* Action Buttons */}
                     <div className="flex gap-2">
                       {project.github && (
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           size="sm"
                           className="flex-1 text-xs"
                           onClick={() => window.open(project.github, '_blank')}
@@ -202,7 +220,7 @@ const Projects = () => {
                         </Button>
                       )}
                       {project.demo && (
-                        <Button 
+                        <Button
                           size="sm"
                           className="flex-1 text-xs"
                           onClick={() => window.open(project.demo, '_blank')}
