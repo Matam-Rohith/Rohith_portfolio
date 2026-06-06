@@ -25,6 +25,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "AI Prompt Playground",
+      description: "An interactive tool to learn and write better prompts with instant, rule-based feedback — no backend required. Features a 7-rule prompt analyzer, score out of 10, auto-improvement engine, and 6 example bad prompts.",
+      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
+      github: "https://github.com/Matam-Rohith/ai-prompt-playground",
+      demo: "https://matam-rohith.github.io/ai-prompt-playground/",
+      tags: ["HTML5", "CSS3", "JavaScript", "Prompt Engineering"],
+      color: "purple"
+    },
+    {
       title: "E-Commerce Website",
       description: "A full-featured e-commerce platform built with modern web technologies, featuring product catalog, shopping cart, and responsive design.",
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
