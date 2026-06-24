@@ -15,13 +15,13 @@ const About = () => {
 
   const stats = [
     { value: '15+', label: 'Projects Built' },
-    { value: '7.30', label: 'CGPA' },
+    { value: '7.26', label: 'CGPA' },
     { value: '5+', label: 'Tech Stacks' },
-    { value: '2026', label: 'Graduate' },
+    { value: 'Jun 2026', label: 'Graduated' },
   ];
 
   const highlights = [
-    { icon: GraduationCap, color: 'violet', title: 'B.Tech — CSE', sub: 'CGPA 7.30 | Graduated 2026' },
+    { icon: GraduationCap, color: 'violet', title: 'B.Tech — CSE', sub: 'CGPA 7.26 | Graduated June 2026' },
     { icon: MapPin,        color: 'blue',   title: 'Location', sub: 'Telangana, India' },
     { icon: Briefcase,     color: 'cyan',   title: 'Portfolio', sub: '15+ Projects across Web, ML & IoT' },
     { icon: Target,        color: 'rose',   title: 'Target Roles', sub: 'SDE · QA/SDET · Data Analyst · BA' },
@@ -38,13 +38,11 @@ const About = () => {
 
   return (
     <section id="about" ref={sectionRef} className="py-20 bg-white dark:bg-[#080812] relative overflow-hidden">
-      {/* Subtle bg accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-violet-100/60 dark:bg-violet-900/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100/60 dark:bg-blue-900/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
-          {/* Heading */}
           <div className="text-center mb-14 animate-on-scroll">
             <span className="inline-block text-xs font-bold tracking-widest uppercase text-violet-500 mb-3">Who I am</span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
@@ -68,7 +66,7 @@ const About = () => {
             <div className="animate-on-scroll space-y-5">
               <div className="glass-card rounded-2xl p-6 space-y-4">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-                  I'm <span className="font-bold text-gray-900 dark:text-white">Matam Rohith</span>, a CSE graduate from Telangana passionate about crafting end-to-end digital solutions — from intuitive React interfaces to robust REST APIs, ML models, and data pipelines.
+                  I'm <span className="font-bold text-gray-900 dark:text-white">Matam Rohith</span>, a CSE graduate from Telangana (June 2026) passionate about crafting end-to-end digital solutions — from intuitive React interfaces to robust REST APIs, ML models, and data pipelines.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                   My work spans full-stack web development, automated QA testing, data analysis, and AI/ML applications. I thrive at the intersection of engineering and insight — whether it's a smart IoT system, a NLP classifier, or an analytics dashboard.
