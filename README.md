@@ -1,23 +1,23 @@
-# 💼 My Developer Portfolio
+# My Developer Portfolio
 
-Welcome to my personal portfolio website! 🚀  
-Crafted using **HTML**, **CSS**, **JavaScript**, and **React**, this site showcases my projects, skills, and journey as a developer.
+Welcome to my personal portfolio website. Crafted using **HTML**, **CSS**, **JavaScript**, and **React**, this site showcases my projects, skills, and journey as a developer.
 
-## 🌐 Live Preview
+## Live Preview
 
-🔗 [Check it out here](https://rohiths-portfolio-three.vercel.app/)
+[Check it out here](https://rohiths-portfolio-three.vercel.app/)
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- 💻 **Frontend**: HTML, CSS (Flexbox & Grid), JavaScript (ES6+), React
-- 🎨 **Styling**: Tailwind CSS / Sass / CSS Modules *(Choose based on what you used)*
-- 🌍 **Deployment**: GitHub Pages / Netlify / Vercel *(Choose your platform)*
+- **Frontend**: HTML, CSS (Flexbox & Grid), JavaScript (ES6+), React
+- **Styling**: Tailwind CSS / Sass / CSS Modules
+- **Deployment**: Vercel
 
-## 📸 Features
+## Features
 
-- 🎯 Responsive Design
-- 🧠 Project Showcases
-- 📞 Contact Form Integration
-- 🧰 Dynamic Tech Stack Display
-- 🌗 Light/Dark Mode *(if applicable)*
+- Responsive Design
+- Project Showcases
+- Contact Form Integration
+- Dynamic Tech Stack Display
+- Light/Dark Mode
+
 ![Header](portfolio.png)
