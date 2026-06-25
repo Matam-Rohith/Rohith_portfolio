@@ -56,10 +56,11 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
-    cursor: none;
+    /* Normal system cursor restored */
+    cursor: auto;
   }
   h1, h2, h3 { font-family: 'Poppins', sans-serif; }
-  a, button, [role="button"], input, textarea, select, label { cursor: none; }
+  a, button, [role="button"] { cursor: pointer; }
 }
 
 @layer utilities {
