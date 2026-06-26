@@ -12,7 +12,7 @@ const Header = () => {
     { label: 'Skills', href: '#skills', id: 'skills' },
     { label: 'Experience', href: '#internships', id: 'internships' },
     { label: 'Projects', href: '#projects', id: 'projects' },
-    { label: 'Certs', href: '#certifications', id: 'certifications' },
+    { label: 'Certifications', href: '#certifications', id: 'certifications' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 

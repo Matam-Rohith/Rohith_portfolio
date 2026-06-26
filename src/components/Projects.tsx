@@ -41,7 +41,7 @@ const projects: Project[] = [
     description: 'Interactive analytics dashboard for ICC T20 WC 2024 — team performance, run-rate trends, top batsmen/bowlers & head-to-head stats.',
     image: 'https://images.pexels.com/photos/1661950/pexels-photo-1661950.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Matam-Rohith/icc-t20-worldcup-analytics',
-    demo: 'https://matam-rohith.github.io/icc-t20-worldcup-analytics/',
+    demo: 'https://icc-t20-worldcup-analytics.onrender.com/',
     tags: ['Node.js', 'Express', 'Chart.js', 'Bootstrap', 'JavaScript'],
     color: 'blue', badge: 'New', category: 'Data Analytics',
   },

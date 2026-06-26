@@ -133,7 +133,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 className="border-violet-400 text-violet-600 dark:text-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/20 px-7 py-2.5 rounded-full hover:scale-105 text-sm font-bold transition-all duration-200"
-                onClick={() => window.open('https://drive.google.com/file/d/1IHhigEf20VwwlGz5HloihiHKQpQZWBpU/view?usp=sharing', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/13jCvjh85efBynPjkjZyho01H79My-U4m/view?usp=sharing', '_blank')}
               >
                 <Download className="w-4 h-4 mr-2" /> Resume
               </Button>

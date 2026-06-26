@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Calendar, MapPin, Award } from 'lucide-react';
 
@@ -29,7 +28,8 @@ const Qualifications = () => {
       institution: "SR University, Hanamkonda",
       duration: "2022 - 2026",
       subjects: "Core IT subjects including DSA, Embedded Systems, Design Analysis and Algorithm, Operating Systems, and Computer Architecture",
-      status: "Current",
+      status: "Completed · June 2026",
+      score: "7.26 GPA",
       icon: "🎓"
     },
     {
@@ -93,7 +93,7 @@ const Qualifications = () => {
                             </div>
                           )}
                           {qual.status && (
-                            <span className="bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-200 px-2 py-1 rounded-full text-xs font-medium inline-block mt-1">
+                            <span className="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium inline-block mt-1">
                               {qual.status}
                             </span>
                           )}
