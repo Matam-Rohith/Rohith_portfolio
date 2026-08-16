@@ -1,113 +1,23 @@
 import { useEffect } from 'react';
 
 const CustomCursor = () => {
-  useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      // Create ripple container
-      const ripple = document.createElement('div');
-      ripple.style.cssText = `
-        position: fixed;
-        left: ${e.clientX}px;
-        top: ${e.clientY}px;
-        pointer-events: none;
-        z-index: 99999;
-        transform: translate(-50%, -50%);
-      `;
-
-      // Create multiple burst rings
-      for (let i = 0; i < 3; i++) {
-        const ring = document.createElement('div');
-        ring.style.cssText = `
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-radius: 50%;
-          border: 2px solid rgba(139, 92, 246, ${0.8 - i * 0.2});
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          animation: rippleBurst 0.6s ease-out ${i * 0.1}s forwards;
-        `;
-        ripple.appendChild(ring);
-      }
-
-      // Inner dot flash
-      const dot = document.createElement('div');
-      dot.style.cssText = `
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        animation: dotFlash 0.4s ease-out forwards;
-        box-shadow: 0 0 16px rgba(139,92,246,0.8);
-      `;
-      ripple.appendChild(dot);
-
-      // Spark particles
-      for (let i = 0; i < 6; i++) {
-        const angle = (i / 6) * 360;
-        const spark = document.createElement('div');
-        spark.style.cssText = `
-          position: absolute;
-          width: 4px;
-          height: 4px;
-          border-radius: 50%;
-          background: ${i % 2 === 0 ? '#8b5cf6' : '#06b6d4'};
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          animation: sparkFly${i} 0.5s ease-out forwards;
-        `;
-
-        // Inline keyframe via style tag per spark direction
-        const styleEl = document.createElement('style');
-        const dx = Math.cos((angle * Math.PI) / 180) * 28;
-        const dy = Math.sin((angle * Math.PI) / 180) * 28;
-        styleEl.textContent = `
-          @keyframes sparkFly${i} {
-            0%   { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            100% { transform: translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0); opacity: 0; }
-          }
-        `;
-        document.head.appendChild(styleEl);
-        setTimeout(() => styleEl.remove(), 1000);
-
-        ripple.appendChild(spark);
-      }
-
-      document.body.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 800);
-    };
-
-    // Inject global keyframes once
-    const styleTag = document.createElement('style');
-    styleTag.id = 'click-ripple-styles';
-    styleTag.textContent = `
-      @keyframes rippleBurst {
-        0%   { width: 0;    height: 0;    opacity: 1; }
-        100% { width: 60px; height: 60px; opacity: 0; }
-      }
-      @keyframes dotFlash {
-        0%   { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
-        100% { transform: translate(-50%, -50%) scale(0);   opacity: 0; }
-      }
-    `;
-    if (!document.getElementById('click-ripple-styles')) {
-      document.head.appendChild(styleTag);
-    }
-
-    document.addEventListener('click', handleClick);
-    return () => {
-      document.removeEventListener('click', handleClick);
-      document.getElementById('click-ripple-styles')?.remove();
-    };
-  }, []);
-
-  return null;
+    useEffect(() => {
+          if (window.matchMedia('(pointer: coarse)').matches) return;
+          const dot = document.createElement('div');
+          const ring = document.createElement('div');
+          dot.className = 'cursor-dot'; ring.className = 'cursor-ring';
+          document.body.append(dot, ring);
+          let x = -100, y = -100, rx = -100, ry = -100, frame = 0;
+          const move = (e: MouseEvent) => { x = e.clientX; y = e.clientY; document.body.classList.add('cursor-ready'); };
+          const animate = () => { rx += (x - rx) * .16; ry += (y - ry) * .16; dot.style.transform = `translate3d(${x}px,${y}px,0) translate(-50%,-50%)`; ring.style.transform = `translate3d(${rx}px,${ry}px,0) translate(-50%,-50%)`; frame = requestAnimationFrame(animate); };
+          const over = (e: MouseEvent) => { const el = e.target as HTMLElement; if (el.closest('a,button,[role=button],img,.card-aesthetic')) ring.classList.add('cursor-hover'); };
+          const out = (e: MouseEvent) => { const el = e.target as HTMLElement; if (el.closest('a,button,[role=button],img,.card-aesthetic')) ring.classList.remove('cursor-hover'); };
+          document.addEventListener('mousemove', move); document.addEventListener('mouseover', over); document.addEventListener('mouseout', out);
+          frame = requestAnimationFrame(animate);
+          const style = document.createElement('style'); style.id = 'custom-cursor-style'; style.textContent = `.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:99999;border-radius:999px;opacity:0;transition:opacity .25s ease,transform .2s ease}.cursor-dot{width:6px;height:6px;background:#6366f1;box-shadow:0 0 16px #6366f1}.cursor-ring{width:34px;height:34px;border:1px solid rgb(99 102 241 / .55);background:rgb(99 102 241 / .06);backdrop-filter:blur(2px)}.cursor-ready .cursor-dot,.cursor-ready .cursor-ring{opacity:1}.cursor-ring.cursor-hover{width:54px;height:54px;border-color:#0ea5e9;background:rgb(14 165 233 / .1)}@media (prefers-reduced-motion:reduce){.cursor-dot,.cursor-ring{display:none}}`; document.head.appendChild(style);
+          return () => { cancelAnimationFrame(frame); document.removeEventListener('mousemove',move); document.removeEventListener('mouseover',over); document.removeEventListener('mouseout',out); dot.remove(); ring.remove(); style.remove(); document.body.classList.remove('cursor-ready'); };
+    }, []);
+    return null;
 };
 
 export default CustomCursor;
