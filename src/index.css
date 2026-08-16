@@ -1,3 +1,29 @@
+
+
+/* Premium portfolio layer */
+:root { --ease-premium: cubic-bezier(.22,1,.36,1); }
+body { background-image: radial-gradient(circle at 15% 15%, rgb(99 102 241 / .06), transparent 28%), radial-gradient(circle at 85% 70%, rgb(14 165 233 / .05), transparent 30%); }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E"); mix-blend-mode: overlay; }
+section { scroll-margin-top: 5.5rem; }
+section h2 { letter-spacing: -.045em; }
+section h2 .text-gradient { background-size: 180% auto; animation: gradient-flow 8s ease-in-out infinite; }
+@keyframes gradient-flow { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.glass-card { border-color: rgb(255 255 255 / .7); box-shadow: 0 18px 55px rgb(15 23 42 / .07), inset 0 1px 0 rgb(255 255 255 / .9); transition: transform .45s var(--ease-premium), box-shadow .45s var(--ease-premium), border-color .45s ease; }
+.glass-card:hover { border-color: rgb(129 140 248 / .45); box-shadow: 0 24px 70px rgb(79 70 229 / .13), inset 0 1px 0 rgb(255 255 255 / .95); }
+.dark .glass-card { border-color: rgb(129 140 248 / .16); box-shadow: 0 24px 70px rgb(0 0 0 / .35), inset 0 1px 0 rgb(255 255 255 / .05); }
+.dark .glass-card:hover { border-color: rgb(129 140 248 / .4); }
+button, a { transition-timing-function: var(--ease-premium); }
+button:active, a:active { transform: scale(.97); }
+nav a { position: relative; }
+nav a::after { content: ''; position: absolute; left: 50%; right: 50%; bottom: -.35rem; height: 2px; border-radius: 99px; background: linear-gradient(90deg,#6366f1,#0ea5e9); transition: left .3s var(--ease-premium), right .3s var(--ease-premium); }
+nav a:hover::after { left: 15%; right: 15%; }
+#projects .card-aesthetic { position: relative; isolation: isolate; }
+#projects .card-aesthetic::after { content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; opacity: 0; background: linear-gradient(120deg, rgb(255 255 255 / .18), transparent 35%); transition: opacity .4s ease; }
+#projects .card-aesthetic:hover::after { opacity: 1; }
+#projects img { filter: saturate(.9) contrast(1.03); transition: transform .8s var(--ease-premium), filter .6s ease; }
+#projects .group:hover img { filter: saturate(1.15) contrast(1.05); }
+@media (max-width: 640px) { body::before { opacity: .02; } section { scroll-margin-top: 4.5rem; } #projects .card-aesthetic:hover { transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { body::before, .text-gradient { animation: none !important; } .glass-card, #projects img { transition: none !important; } }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
