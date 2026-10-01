@@ -1,8 +1,73 @@
 import { useEffect, useRef } from 'react';
-import { Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Briefcase, Sparkles, CheckCircle2, ChevronRight } from 'lucide-react';
+
+type ExperienceItem = {
+  role: string;
+  organization: string;
+  affiliation?: string;
+  duration: string;
+  location: string;
+  status: 'Current' | 'Completed';
+  summary: string;
+  keyContributions: string[];
+  skills: string[];
+  certificateUrl?: string;
+};
+
+const experienceList: ExperienceItem[] = [
+  {
+    role: "LLM Engineer Intern",
+    organization: "Ethara.ai",
+    duration: "February 2026 – Present",
+    location: "Remote",
+    status: "Current",
+    summary: "Active internship focusing on large language model applications, generative AI workflows, and natural language processing pipelines.",
+    keyContributions: [
+      "Building and testing production-oriented generative AI components and prompt architectures",
+      "Evaluating latency, context limits, and token efficiency for enterprise LLM tasks",
+      "Developing evaluation heuristics to measure model accuracy and prevent hallucinations",
+      "Collaborating on real-world generative AI workflows and integration endpoints"
+    ],
+    skills: ["Large Language Models (LLMs)", "Generative AI", "Prompt Engineering", "Python", "API Integration"]
+  },
+  {
+    role: "AI-ML Virtual Intern",
+    organization: "EduSkills Foundation",
+    affiliation: "AICTE – National Internship Portal (AWS Academy Aligned)",
+    duration: "January 2025 – March 2025",
+    location: "Virtual / India",
+    status: "Completed",
+    summary: "Comprehensive 10-week practical internship aligned with AWS Academy machine learning curriculum and industrial use cases.",
+    keyContributions: [
+      "Completed hands-on modules in feature engineering, train-test splitting, and data normalization",
+      "Trained classical supervised regression and classification models using scikit-learn",
+      "Conducted exploratory data analysis across high-dimensional datasets using Python Pandas",
+      "Gained working familiarity with AWS cloud-based machine learning pipelines"
+    ],
+    skills: ["Python", "Machine Learning", "Data Preprocessing", "scikit-learn", "AWS Academy"],
+    certificateUrl: "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=sharing"
+  },
+  {
+    role: "Cloud Virtual Intern",
+    organization: "EduSkills Foundation",
+    affiliation: "AICTE – National Internship Portal (AWS Academy Aligned)",
+    duration: "July 2024 – September 2024",
+    location: "Virtual / India",
+    status: "Completed",
+    summary: "10-week structured cloud infrastructure program exploring foundational architecture, managed databases, security, and Linux administration.",
+    keyContributions: [
+      "Configured virtual servers, virtual private clouds (VPCs), and subnets within AWS sandbox environments",
+      "Managed object storage buckets, access policies, and IAM role-based authentication",
+      "Practiced shell navigation, server setup, and foundational Linux system administration",
+      "Completed practical assessment labs evaluating cloud architecture resilience and cost optimization"
+    ],
+    skills: ["AWS Cloud", "Cloud Infrastructure", "IAM Policies", "Linux CLI", "S3 & EC2 Basics"],
+    certificateUrl: "https://drive.google.com/file/d/1ZYLiim1DxtAYS8f9r7Pa2Y3aRRRzK0JM/view?usp=sharing"
+  }
+];
 
 const Internships = () => {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,137 +87,139 @@ const Internships = () => {
     return () => observer.disconnect();
   }, []);
 
-  const internships = [
-    {
-      position: "LLM-Intern",
-      company: "Ethara.ai",
-      duration: "February 2026 – Present",
-      location: "Remote",
-      description:
-        "Currently working as an LLM Intern, gaining hands-on experience in building and optimizing large language model applications, developing AI-driven solutions, and understanding real-world workflows in generative AI and natural language processing.",
-      technologies: [
-        "Large Language Models (LLMs)",
-        
-      ],
-      certificate: "",
-      icon: "💼",
-    },
-    {
-      position: "AI-ML Virtual Intern",
-      company: "EduSkills Foundation (AICTE – National Internship Portal)",
-      duration: "January 2025 – March 2025",
-      location: "India (Virtual)",
-      description:
-        "Completed a 10-week AI-ML virtual internship, gaining hands-on experience in data preprocessing, basic machine learning models, and real-world AI concepts through AWS Academy–aligned coursework.",
-      technologies: [
-        "Python",
-        "Machine Learning",
-        "Data Preprocessing",
-        "AWS Academy"
-      ],
-      certificate:
-        "https://drive.google.com/file/d/1DQSc7tm59Q3oZWzrfExDq74VpAegjwW1/view?usp=sharing",
-      icon: "💼",
-    },
-    {
-      position: "Cloud Virtual Intern",
-      company: "EduSkills Foundation (AICTE – National Internship Portal)",
-      duration: "July 2024 – September 2024",
-      location: "India (Virtual)",
-      description:
-        "Completed a 10-week Cloud Virtual Internship, gaining hands-on exposure to cloud fundamentals, core services, and deployment basics through AWS Academy–aligned labs.",
-      technologies: [
-        "AWS",
-        "Cloud Computing",
-        "Cloud Infrastructure",
-        "Linux Basics"
-      ],
-      certificate:
-        "https://drive.google.com/file/d/1ZYLiim1DxtAYS8f9r7Pa2Y3aRRRzK0JM/view?usp=sharing",
-      icon: "💼",
-    },
-  ];
-
   return (
     <section
       id="internships"
       ref={sectionRef}
-      className="py-16 bg-gray-50 dark:bg-gray-800"
+      className="py-24 bg-slate-50/70 dark:bg-[#08090E] relative overflow-hidden border-t border-slate-200/80 dark:border-slate-800/80"
     >
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              💼 <span className="text-gradient">Internships</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              My internship and practical learning experience
-            </p>
+      {/* Background radial glow */}
+      <div className="glow-mesh top-10 right-1/4 w-96 h-96 bg-indigo-500/5 dark:bg-indigo-600/10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16 animate-on-scroll">
+          <div className="section-tag">
+            <span className="section-tag-dot" />
+            <span>Work & Practical Experience</span>
           </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white font-display">
+            Internships & <span className="text-gradient">Applied Engineering</span>
+          </h2>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Real-world immersion across Generative AI, machine learning pipelines, and cloud systems.
+          </p>
+        </div>
 
-          <div className="space-y-8">
-            {internships.map((internship, index) => (
+        {/* Timeline Stack */}
+        <div className="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 sm:ml-6 pl-6 sm:pl-8 space-y-10">
+          {experienceList.map((item, index) => {
+            const isCurrent = item.status === 'Current';
+            return (
               <div
-                key={index}
-                className="animate-on-scroll"
-                style={{ animationDelay: `${index * 0.3}s` }}
+                key={item.role + item.organization}
+                className="relative animate-on-scroll"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg border-l-4 border-blue-500">
-                  <div className="flex items-start gap-4">
-                    <span className="text-3xl">{internship.icon}</span>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                        {internship.position}
+                {/* Timeline node */}
+                <div className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full border-2 bg-white dark:bg-slate-900 ${
+                  isCurrent 
+                    ? 'border-indigo-600 dark:border-indigo-400 ring-4 ring-indigo-500/20' 
+                    : 'border-slate-400 dark:border-slate-600'
+                }`} />
+
+                {/* Experience Card */}
+                <div className="p-6 sm:p-7 rounded-2xl glass-card border border-slate-200/90 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500/40">
+                  
+                  {/* Top Bar: Role & Status */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-display">
+                        {item.role}
                       </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-semibold">
-                        {internship.company}
-                      </p>
-
-                      <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-600 dark:text-gray-300">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {internship.duration}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          {internship.location}
-                        </div>
-                      </div>
-
-                      <p className="mt-4 text-gray-600 dark:text-gray-300">
-                        {internship.description}
-                      </p>
-
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {internship.technologies.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-
-                      {internship.certificate && (
-                        <a
-                          href={internship.certificate}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block mt-4 text-blue-600 dark:text-blue-400 underline"
-                        >
-                          View Certificate
-                        </a>
+                      {isCurrent ? (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                          Current Role
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400">
+                          Completed
+                        </span>
                       )}
                     </div>
+
+                    {/* Metadata: Dates & Location */}
+                    <div className="flex items-center gap-4 text-xs font-mono text-slate-500 dark:text-slate-400">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {item.duration}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {item.location}
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Company & Affiliation */}
+                  <div className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-4">
+                    {item.organization}
+                    {item.affiliation && (
+                      <span className="text-xs font-normal text-slate-500 dark:text-slate-400 ml-2">
+                        ({item.affiliation})
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Summary */}
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    {item.summary}
+                  </p>
+
+                  {/* Key Contributions */}
+                  <div className="space-y-1.5 mb-5">
+                    {item.keyContributions.map((contrib, cIdx) => (
+                      <div key={cIdx} className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                        <ChevronRight className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0 mt-0.5" />
+                        <span>{contrib}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tech stack & certificate */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                    <div className="flex flex-wrap gap-1.5">
+                      {item.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+
+                    {item.certificateUrl && (
+                      <a
+                        href={item.certificateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 whitespace-nowrap"
+                      >
+                        <span>View Verified Certificate</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+
                 </div>
               </div>
-            ))}
-          </div>
-
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

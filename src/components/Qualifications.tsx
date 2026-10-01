@@ -1,5 +1,48 @@
 import { useEffect, useRef } from 'react';
-import { Calendar, MapPin, Award } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+
+const educationData = [
+  {
+    level: "Undergraduate Degree",
+    degree: "B.Tech in Computer Science & Engineering",
+    institution: "SR University",
+    location: "Hanamkonda, Telangana",
+    period: "2022 – 2026",
+    score: "7.26 CGPA",
+    status: "Graduating June 2026",
+    highlights: [
+      "Core Specialization: Software Engineering, Data Structures, Operating Systems, and Distributed Computing",
+      "Applied Coursework: Database Management Systems (SQL), Computer Networks, Machine Learning, and Embedded IoT",
+      "Active participant in technical symposiums, hackathons, and departmental coding workshops"
+    ]
+  },
+  {
+    level: "Higher Secondary (Class XII)",
+    degree: "Intermediate — MPC (Maths, Physics, Chemistry)",
+    institution: "SR Prime School",
+    location: "Telangana, India",
+    period: "2020 – 2022",
+    score: "75.2%",
+    status: "Completed",
+    highlights: [
+      "Rigorous foundations in advanced mathematics, analytical reasoning, and physics",
+      "Developed early algorithmic interest and competitive aptitude"
+    ]
+  },
+  {
+    level: "Secondary School (Class X)",
+    degree: "All India Secondary School Examination (CBSE)",
+    institution: "Millennium High School",
+    location: "Telangana, India",
+    period: "2019 – 2020",
+    score: "71.4%",
+    status: "Completed",
+    highlights: [
+      "Comprehensive STEM curriculum and scientific fundamentals",
+      "Active involvement in school science exhibitions and technical clubs"
+    ]
+  }
+];
 
 const Qualifications = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -22,110 +65,91 @@ const Qualifications = () => {
     return () => observer.disconnect();
   }, []);
 
-  const qualifications = [
-    {
-      degree: "B.Tech in Computer Science Engineering",
-      institution: "SR University, Hanamkonda",
-      duration: "2022 - 2026",
-      subjects: "Core IT subjects including DSA, Embedded Systems, Design Analysis and Algorithm, Operating Systems, and Computer Architecture",
-      status: "Completed · June 2026",
-      score: "7.26 GPA",
-      icon: "🎓"
-    },
-    {
-      degree: "Class 12 (Intermediate)",
-      institution: "SR Prime School",
-      duration: "2020 - 2022",
-      subjects: "Physics, Chemistry, Maths, English Core, Physical Education",
-      score: "75.2%",
-      icon: "📚"
-    },
-    {
-      degree: "Class 10 (CBSE)",
-      institution: "Millennium High School",
-      duration: "2019 - 2020",
-      subjects: "Science, Maths, English, Social Studies, Telugu",
-      score: "71.4%",
-      icon: "📖"
-    }
-  ];
-
   return (
-    <section id="qualifications" ref={sectionRef} className="py-16 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              🎓 <span className="text-gradient">Qualifications</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              My educational journey and academic achievements
-            </p>
+    <section id="qualifications" ref={sectionRef} className="py-24 bg-white dark:bg-[#090A10] relative overflow-hidden border-t border-slate-100 dark:border-slate-800/60">
+      
+      {/* Background glow */}
+      <div className="glow-mesh bottom-10 left-10 w-96 h-96 bg-indigo-500/5 dark:bg-indigo-600/5" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16 animate-on-scroll">
+          <div className="section-tag">
+            <span className="section-tag-dot" />
+            <span>Academic Background</span>
           </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full hidden md:block"></div>
-
-            <div className="space-y-8">
-              {qualifications.map((qual, index) => (
-                <div 
-                  key={index}
-                  className={`animate-on-scroll flex flex-col md:flex-row items-center gap-6 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                  style={{ animationDelay: `${index * 0.3}s` }}
-                >
-                  {/* Content Card */}
-                  <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-2xl shadow-lg hover-lift">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="text-2xl">{qual.icon}</span>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                            {qual.degree}
-                          </h3>
-                          {qual.score && (
-                            <div className="flex items-center gap-2 mt-1">
-                              <Award className="w-3 h-3 text-blue-500" />
-                              <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm">{qual.score}</span>
-                            </div>
-                          )}
-                          {qual.status && (
-                            <span className="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium inline-block mt-1">
-                              {qual.status}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm">
-                          <MapPin className="w-3 h-3" />
-                          <span>{qual.institution}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm">
-                          <Calendar className="w-3 h-3" />
-                          <span>{qual.duration}</span>
-                        </div>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-                          {qual.subjects}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Timeline dot */}
-                  <div className="hidden md:block w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-3 border-white dark:border-gray-900 shadow-lg z-10"></div>
-
-                  {/* Spacer */}
-                  <div className="w-full md:w-5/12"></div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white font-display">
+            Education & <span className="text-gradient">Academic Credentials</span>
+          </h2>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
+            Structured foundation in Computer Science, mathematical reasoning, and software systems.
+          </p>
         </div>
+
+        {/* 3-Card Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {educationData.map((edu, idx) => (
+            <div
+              key={edu.degree}
+              className="animate-on-scroll"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
+              <div className="h-full p-6 sm:p-7 rounded-2xl glass-card border border-slate-200/90 dark:border-slate-800 flex flex-col hover:border-indigo-400 dark:hover:border-indigo-500/40">
+                
+                {/* Level micro-tag & period */}
+                <div className="flex items-center justify-between text-xs font-mono text-slate-500 dark:text-slate-400 mb-3">
+                  <span>{edu.level}</span>
+                  <span>{edu.period}</span>
+                </div>
+
+                {/* Degree & Institution */}
+                <div className="mb-4">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                    {edu.degree}
+                  </h3>
+                  <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 mt-1">
+                    {edu.institution}
+                  </div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+                    {edu.location}
+                  </div>
+                </div>
+
+                {/* Score badge / status */}
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800 mb-5 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Award className="w-4 h-4 text-indigo-500" />
+                    <span className="text-xs text-slate-600 dark:text-slate-300">Grade / Score</span>
+                  </div>
+                  <span className="text-xs font-bold font-mono text-slate-900 dark:text-white tabular-nums">
+                    {edu.score}
+                  </span>
+                </div>
+
+                {/* Key Coursework / Highlights */}
+                <div className="space-y-2 flex-1">
+                  {edu.highlights.map((hl, hIdx) => (
+                    <div key={hIdx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0 mt-0.5" />
+                      <span>{hl}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Status indicator footer */}
+                <div className="pt-4 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+                  <span>Status</span>
+                  <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                    {edu.status}
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
