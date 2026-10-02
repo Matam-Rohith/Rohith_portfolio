@@ -93,7 +93,7 @@ const About = () => {
                 Over the course of my degree, I have delivered over 15 distinct software projects ranging from distributed ASP.NET Core APIs and real-time analytical dashboards to automated test suites and IoT embedded prototypes. I believe exceptional software must be both technically resilient and user-intuitive.
               </p>
               <p>
-                Currently interning as an LLM Engineer at Ethara.ai, I actively explore prompt architecture, generative AI workflows, and model integration into enterprise applications.
+                Having completed an internship as an LLM Engineer at Ethara.ai, I actively explore prompt architecture, generative AI workflows, and model integration into enterprise applications.
               </p>
             </div>
 
@@ -120,9 +120,9 @@ const About = () => {
               <div className="p-4 rounded-xl glass-card border border-slate-200/80 dark:border-slate-800/80">
                 <div className="flex items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400 mb-1">
                   <Briefcase className="w-4 h-4 text-emerald-500" />
-                  <span>Current Experience</span>
+                  <span>Experience</span>
                 </div>
-                <div className="text-sm font-bold text-slate-900 dark:text-white">LLM Intern</div>
+                <div className="text-sm font-bold text-slate-900 dark:text-white">LLM Engineer Intern</div>
                 <div className="text-xs text-slate-500 dark:text-slate-400">Ethara.ai (Remote)</div>
               </div>
 

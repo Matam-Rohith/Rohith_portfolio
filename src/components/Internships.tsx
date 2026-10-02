@@ -18,10 +18,10 @@ const experienceList: ExperienceItem[] = [
   {
     role: "LLM Engineer Intern",
     organization: "Ethara.ai",
-    duration: "February 2026 – Present",
+    duration: "February 2026 – May 2026",
     location: "Remote",
-    status: "Current",
-    summary: "Active internship focusing on large language model applications, generative AI workflows, and natural language processing pipelines.",
+    status: "Completed",
+    summary: "Internship focusing on large language model applications, generative AI workflows, and natural language processing pipelines.",
     keyContributions: [
       "Building and testing production-oriented generative AI components and prompt architectures",
       "Evaluating latency, context limits, and token efficiency for enterprise LLM tasks",

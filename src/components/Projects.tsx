@@ -14,11 +14,19 @@ import {
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
-// Generated local high-fidelity assets
-import imgAnalytics from '@/assets/images/project_analytics_dashboard_1790870998813.jpg';
-import imgCloudApi from '@/assets/images/project_aspnet_api_1790871009771.jpg';
-import imgNlpAi from '@/assets/images/project_nlp_ai_1790871023005.jpg';
-import imgNeuralHero from '@/assets/images/hero_ai_neural_viz_1790870986522.jpg';
+// Generated local high-fidelity assets tailored to each engineering project
+import imgLibraryApi from '@/assets/images/project_library_api_1790871523997.jpg';
+import imgCricketAnalytics from '@/assets/images/cricket_analytics_board_1790916145175.jpg';
+import imgEcommerceAnalytics from '@/assets/images/project_analytics_dashboard_1790870998813.jpg';
+import imgPromptIde from '@/assets/images/prompt_ide_interface_1790916170564.jpg';
+import imgTalentFlowHrm from '@/assets/images/talentflow_hrm_portal_1790916157438.jpg';
+import imgUrlShortener from '@/assets/images/url_shortener_service_1790916183672.jpg';
+import imgNotesApp from '@/assets/images/notes_app_interface_1790916198135.jpg';
+import imgStudentPortal from '@/assets/images/student_portal_suite_1790916212433.jpg';
+import imgSmsSpam from '@/assets/images/sms_spam_detector_1790916224824.jpg';
+import imgCancerMl from '@/assets/images/medical_cancer_ml_1790916237506.jpg';
+import imgBankLedger from '@/assets/images/bank_ledger_system_1790916250754.jpg';
+import imgSmartParking from '@/assets/images/smart_parking_sensor_1790916266115.jpg';
 
 export type Project = {
   id: string;
@@ -42,7 +50,7 @@ const projectsData: Project[] = [
     subtitle: 'ASP.NET Core 8 · Clean Architecture · SQL Server',
     description: 'Enterprise-grade Web API with JWT auth, Entity Framework Core, SQL Server & Swagger. Covers book inventory, borrow/return workflows, automated fine calculation & reservations.',
     longDescription: 'A production-grade RESTful API built following Clean Architecture principles. Implements role-based access control (RBAC), repository pattern with unit-of-work, automated database migrations, comprehensive request validation via FluentValidation, and interactive OpenAPI documentation.',
-    image: imgCloudApi,
+    image: imgLibraryApi,
     github: 'https://github.com/Matam-Rohith/LibraryManagementSystem',
     tags: ['C#', 'ASP.NET Core 8', 'EF Core', 'SQL Server', 'JWT', 'Swagger'],
     category: 'Backend',
@@ -60,7 +68,7 @@ const projectsData: Project[] = [
     subtitle: 'Interactive Sports Intelligence Dashboard',
     description: 'Dynamic sports intelligence dashboard featuring real-time run-rate charts, head-to-head match trends, and batsman/bowler performance metrics for the 2024 World Cup.',
     longDescription: 'Full-stack sports analytics web application aggregating tournament match logs. Features interactive Chart.js visualizations, match scenario simulations, strike-rate comparative charts, and responsive telemetry design deployed on Render.',
-    image: imgAnalytics,
+    image: imgCricketAnalytics,
     github: 'https://github.com/Matam-Rohith/icc-t20-worldcup-analytics',
     demo: 'https://icc-t20-worldcup-analytics.onrender.com/',
     tags: ['Node.js', 'Express', 'Chart.js', 'JavaScript', 'Render'],
@@ -79,7 +87,7 @@ const projectsData: Project[] = [
     subtitle: 'RFM Segmentation & Sales Forecasting Pipeline',
     description: 'End-to-end data analytics platform utilizing SQL and Python for RFM customer segmentation, seasonal sales forecasting, churn risk evaluation, and profit margin analysis.',
     longDescription: 'Comprehensive customer intelligence solution processing transactional orders. Calculates recency, frequency, and monetary scores to categorize users into retention cohorts and forecasts quarterly sales volume.',
-    image: imgAnalytics,
+    image: imgEcommerceAnalytics,
     github: 'https://github.com/Matam-Rohith/ecommerce-sales-customer-analytics',
     demo: 'https://matam-rohith.github.io/ecommerce-sales-customer-analytics/',
     tags: ['Python', 'SQL', 'RFM Analysis', 'Sales Forecasting', 'Data Modeling'],
@@ -98,7 +106,7 @@ const projectsData: Project[] = [
     subtitle: '7-Rule Analyzer & Prompt Optimization Engine',
     description: 'Interactive IDE for crafting, benchmarking, and enhancing generative AI prompts with real-time heuristic scoring, automated clarification engines, and token analysis.',
     longDescription: 'A developer utility designed to test and refine LLM prompts before production deployment. Analyzes prompt ambiguity, context completeness, role specification, output constraint enforcement, and suggests automated high-yield rewrites.',
-    image: imgNlpAi,
+    image: imgPromptIde,
     github: 'https://github.com/Matam-Rohith/ai-prompt-playground',
     demo: 'https://matam-rohith.github.io/ai-prompt-playground/',
     tags: ['JavaScript', 'HTML5', 'Prompt Engineering', 'GenAI Workflows'],
@@ -117,7 +125,7 @@ const projectsData: Project[] = [
     subtitle: 'Employee Lifecycle & Attendance Analytics',
     description: 'Comprehensive HR portal managing the full employee lifecycle — recruitment, onboarding, leave tracking, payroll computation, and team performance analytics.',
     longDescription: 'Modern dashboard application built to streamline HR operations. Features custom attendance logs, leave request approval workflows, role-based view permissions, and graphical payroll breakdowns.',
-    image: imgNeuralHero,
+    image: imgTalentFlowHrm,
     github: 'https://github.com/Matam-Rohith/TalentFlow-HRM',
     demo: 'https://matam-rohith.github.io/TalentFlow-HRM/',
     tags: ['JavaScript', 'CSS3', 'Chart.js', 'HR Tech'],
@@ -134,7 +142,7 @@ const projectsData: Project[] = [
     subtitle: 'REST Redirection Engine & Click Tracker',
     description: 'Full-stack URL shortening service with custom slug generation, instant redirection latency, and continuous deployment on Render.',
     longDescription: 'Engineered for swift redirect resolution. Provides a clean UI for shortening links, collision-resistant hash generation, and backend logging.',
-    image: imgCloudApi,
+    image: imgUrlShortener,
     github: 'https://github.com/Matam-Rohith/URL_Shortener',
     demo: 'https://url-shortener-na16.onrender.com/',
     tags: ['Node.js', 'Express', 'JavaScript', 'Render API'],
@@ -151,7 +159,7 @@ const projectsData: Project[] = [
     subtitle: 'React & TypeScript Productivity Suite',
     description: 'Fast, responsive notes management web app built with React, TypeScript, and localized state persistence, deployed on Vercel.',
     longDescription: 'Focused writing experience featuring instant debounced search, rich categorization, tags, and zero-latency LocalStorage sync.',
-    image: imgNlpAi,
+    image: imgNotesApp,
     github: 'https://github.com/Matam-Rohith/notes-app',
     demo: 'https://notes-app-zeta-ruddy.vercel.app/',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
@@ -168,7 +176,7 @@ const projectsData: Project[] = [
     subtitle: 'GPA Calculator & Course Timetable Planner',
     description: 'Client-side academic dashboard incorporating dynamic GPA calculations, attendance shortfall warnings, and schedule planner.',
     longDescription: 'A comprehensive academic tracker empowering college students to calculate cumulative and semester GPAs, set target grades, and organize lecture timetables.',
-    image: imgAnalytics,
+    image: imgStudentPortal,
     github: 'https://github.com/Matam-Rohith/student-dashboard',
     demo: 'https://matam-rohith.github.io/student-dashboard/',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage'],
@@ -185,7 +193,7 @@ const projectsData: Project[] = [
     subtitle: 'Machine Learning Text Classifier & Streamlit App',
     description: 'Natural Language Processing model categorizing messages as spam or ham using scikit-learn feature extraction with live Streamlit deployment.',
     longDescription: 'End-to-end NLP machine learning pipeline including text tokenization, TF-IDF vectorization, Naive Bayes / Random Forest model evaluation, and an interactive cloud inference app.',
-    image: imgNlpAi,
+    image: imgSmsSpam,
     github: 'https://github.com/Matam-Rohith/NLP/blob/main/sms_spam_detection_nlp.ipynb',
     demo: 'https://mamfegbtbyckxtr4ncu3nq.streamlit.app/',
     tags: ['Python', 'NLP', 'scikit-learn', 'TF-IDF', 'Streamlit'],
@@ -203,7 +211,7 @@ const projectsData: Project[] = [
     subtitle: 'Supervised Machine Learning Diagnostic Suite',
     description: 'Machine learning diagnostic classification model trained on clinical diagnostic features, incorporating feature selection and ROC-AUC evaluation.',
     longDescription: 'Medical diagnostic modeling project evaluating supervised algorithms (Logistic Regression, Support Vector Machines, Decision Trees) to predict benign vs malignant diagnoses with high sensitivity.',
-    image: imgNeuralHero,
+    image: imgCancerMl,
     github: 'https://github.com/Matam-Rohith/Cancer_Prediction',
     tags: ['Python', 'scikit-learn', 'Pandas', 'Jupyter', 'Data Science'],
     category: 'AI / ML',
@@ -219,7 +227,7 @@ const projectsData: Project[] = [
     subtitle: 'Java & JDBC Enterprise Banking Application',
     description: 'Robust core banking transaction system managing customer accounts, deposit/withdrawal ledger operations, and Oracle DB integration with strict ACID compliance.',
     longDescription: 'Java desktop and backend application communicating via JDBC to an Oracle relational database, featuring transaction rollbacks, account balance verification, and audit logs.',
-    image: imgCloudApi,
+    image: imgBankLedger,
     github: 'https://github.com/Matam-Rohith/Bank-Management-system',
     tags: ['Java', 'JDBC', 'Oracle DB', 'SQL', 'ACID Transactions'],
     category: 'Backend',
@@ -235,7 +243,7 @@ const projectsData: Project[] = [
     subtitle: 'Arduino UNO & Infrared Sensor Hardware System',
     description: 'Hardware IoT parking management system utilizing Arduino UNO and infrared obstacle sensors to identify and display parking space occupancy in real time.',
     longDescription: 'Embedded computing project integrating hardware sensors with microcontrollers to monitor bay occupancy and provide visual LED telemetry signals for smart city parking.',
-    image: imgNeuralHero,
+    image: imgSmartParking,
     demo: 'https://drive.google.com/drive/folders/1LZD9eOQ0Dppm9OqawQy2y9vvebHRpe18',
     tags: ['Arduino', 'IoT', 'C++', 'Hardware Telemetry', 'Sensors'],
     category: 'IoT',
