@@ -18,15 +18,14 @@ import { Button } from "@/components/ui/button";
 import imgLibraryApi from '@/assets/images/project_library_api_1790871523997.jpg';
 import imgCricketAnalytics from '@/assets/images/cricket_analytics_board_1790916145175.jpg';
 import imgEcommerceAnalytics from '@/assets/images/project_analytics_dashboard_1790870998813.jpg';
-import imgPromptIde from '@/assets/images/prompt_ide_interface_1790916170564.jpg';
 import imgTalentFlowHrm from '@/assets/images/talentflow_hrm_portal_1790916157438.jpg';
 import imgUrlShortener from '@/assets/images/url_shortener_service_1790916183672.jpg';
 import imgNotesApp from '@/assets/images/notes_app_interface_1790916198135.jpg';
-import imgStudentPortal from '@/assets/images/student_portal_suite_1790916212433.jpg';
 import imgSmsSpam from '@/assets/images/sms_spam_detector_1790916224824.jpg';
-import imgCancerMl from '@/assets/images/medical_cancer_ml_1790916237506.jpg';
-import imgBankLedger from '@/assets/images/bank_ledger_system_1790916250754.jpg';
 import imgSmartParking from '@/assets/images/smart_parking_sensor_1790916266115.jpg';
+import imgBudgetTracker from '@/assets/images/budget_tracker_ui_1790954355576.jpg';
+import imgItHelpdesk from '@/assets/images/it_helpdesk_ui_1790954370447.jpg';
+import imgServiceOps from '@/assets/images/serviceops_ui_1790954385989.jpg';
 
 export type Project = {
   id: string;
@@ -45,21 +44,98 @@ export type Project = {
 
 const projectsData: Project[] = [
   {
-    id: 'library-management',
-    title: 'Library Management Enterprise API',
-    subtitle: 'ASP.NET Core 8 · Clean Architecture · SQL Server',
-    description: 'Enterprise-grade Web API with JWT auth, Entity Framework Core, SQL Server & Swagger. Covers book inventory, borrow/return workflows, automated fine calculation & reservations.',
-    longDescription: 'A production-grade RESTful API built following Clean Architecture principles. Implements role-based access control (RBAC), repository pattern with unit-of-work, automated database migrations, comprehensive request validation via FluentValidation, and interactive OpenAPI documentation.',
-    image: imgLibraryApi,
-    github: 'https://github.com/Matam-Rohith/LibraryManagementSystem',
-    tags: ['C#', 'ASP.NET Core 8', 'EF Core', 'SQL Server', 'JWT', 'Swagger'],
-    category: 'Backend',
+    id: 'ecommerce-sales-customer-analytics',
+    title: 'E-Commerce Sales & Customer Analytics',
+    subtitle: 'Interactive Analytics & RFM Customer Segmentation',
+    description: 'End-to-end data analytics platform utilizing SQL and Python for RFM customer segmentation, seasonal sales forecasting, churn risk evaluation, and profit margin analysis.',
+    longDescription: 'Comprehensive customer intelligence solution processing transactional orders. Calculates recency, frequency, and monetary scores to categorize users into retention cohorts and forecasts quarterly sales volume.',
+    image: imgEcommerceAnalytics,
+    github: 'https://github.com/Matam-Rohith/ecommerce-sales-customer-analytics',
+    demo: 'https://ecommerce-sales-customer-analytics-pearl.vercel.app/',
+    tags: ['React', 'Python', 'SQL', 'RFM Analysis', 'Sales Forecasting', 'Vercel'],
+    category: 'Data Analytics',
     featured: true,
     architectureHighlights: [
-      'Repository Pattern with Unit of Work and Entity Framework Core 8',
-      'JWT Authentication & Claims-based Role Authorization',
-      'Automated transaction handling for reserve & return operations with fine calculations',
-      'Structured logging and Swagger OpenAPI documentation'
+      'RFM mathematical model segmenting high-value vs churn-risk customers',
+      'Trend regression algorithms estimating revenue seasonality',
+      'Structured SQL queries optimizing cohort calculations across large datasets',
+      'Interactive executive dashboard deployed live on Vercel for stakeholder decision-making'
+    ]
+  },
+  {
+    id: 'personal-budget-tracker',
+    title: 'Personal Budget Tracker',
+    subtitle: 'Income & Expense Telemetry · Savings Goal Tracker',
+    description: 'Client-side financial dashboard for tracking daily expenses, budgeting across categories, visualizing cash flow trends, and managing monthly savings targets.',
+    longDescription: 'A responsive personal finance tracking platform built for real-time budget management. Features dynamic category breakdowns, expense logging with instant balance updates, interactive spending charts, and local persistence for data privacy.',
+    image: imgBudgetTracker,
+    github: 'https://github.com/Matam-Rohith/personal_budget_tracker',
+    demo: 'https://matam-rohith.github.io/personal_budget_tracker/',
+    tags: ['JavaScript', 'HTML5', 'CSS3', 'Data Visualization', 'LocalStorage', 'GitHub Pages'],
+    category: 'Full-Stack',
+    featured: true,
+    architectureHighlights: [
+      'Interactive category budget tracking with visual limit warnings',
+      'Real-time cash-flow and balance calculations across accounts',
+      'Client-side persistent storage ensuring zero data leakage',
+      'Dynamic spending distribution charts and monthly variance reporting'
+    ]
+  },
+  {
+    id: 'it-helpdesk-portal',
+    title: 'IT Help Desk Portal',
+    subtitle: 'Role-Based Support Ticketing & Resolution Center',
+    description: 'Full-featured IT helpdesk ticketing application with role-based access control, ticket queues, SLA priority tagging, agent assignments, and customer issue resolution.',
+    longDescription: 'A secure, production-style IT helpdesk support portal built to manage employee tech requests. Implements authenticated roles for both end-users and support technicians, automated ticket categorization, priority tagging, ticket lifecycle transitions, and rapid search filtering.',
+    image: imgItHelpdesk,
+    github: 'https://github.com/Matam-Rohith/it-helpdesk-portal',
+    demo: 'https://it-helpdesk-portal-khaki.vercel.app/login',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Role-Based Auth', 'Vercel'],
+    category: 'Full-Stack',
+    featured: true,
+    architectureHighlights: [
+      'Role-based authentication protecting user and technician portal views',
+      'Dynamic ticket lifecycle tracking (New, In Progress, On Hold, Resolved, Closed)',
+      'Categorized request routing for hardware, network, credentials, and software',
+      'Zero-friction deployment on Vercel with responsive mobile and desktop viewports'
+    ]
+  },
+  {
+    id: 'serviceops-itil-platform',
+    title: 'ServiceOps — ITIL Service Management & Support Platform',
+    subtitle: 'Enterprise ITIL v4 Service Operations & Incident Hub',
+    description: 'Enterprise-grade ITIL service management platform streamlining incident response, change request governance, SLA monitoring, and IT service catalog operations.',
+    longDescription: 'ServiceOps delivers an enterprise ITIL v4-compliant service operation and support command center. Features structured incident prioritization matrix (impact vs urgency), automated SLA breach countdowns, change request review boards, service request fulfillment workflows, and centralized team telemetry deployed on Google Cloud Run.',
+    image: imgServiceOps,
+    github: 'https://github.com/Matam-Rohith/ServiceOps---ITIL-Service-Management-Support-Platform',
+    demo: 'https://serviceops-itil-service-management-support-platfo-189251894547.asia-southeast1.run.app/',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'ITIL v4', 'ITSM', 'Cloud Run'],
+    category: 'Full-Stack',
+    featured: true,
+    architectureHighlights: [
+      'ITIL v4 aligned Incident, Problem, Change, and Service Request lifecycle workflows',
+      'Real-time SLA resolution countdowns with dynamic severity escalation triggers',
+      'Enterprise Change Management approval pipeline with risk assessment tracking',
+      'Containerized modern frontend architecture deployed on Google Cloud Run'
+    ]
+  },
+  {
+    id: 'libra-library-system',
+    title: 'Libra — Library Management System',
+    subtitle: 'Modern Library Automation & Circulation Suite',
+    description: 'Comprehensive full-stack library management system featuring book catalog search, borrowing workflows, patron membership management, automated overdue fines, and real-time inventory telemetry.',
+    longDescription: 'Libra is an end-to-end library operations platform designed to streamline library circulation and inventory control. Provides instantaneous book search, member account tracking, automated fine calculations for overdue returns, reservation queues, and administrative inventory analytics.',
+    image: imgLibraryApi,
+    github: 'https://github.com/Matam-Rohith/LibraryManagementSystem',
+    demo: 'https://library-ten-taupe-32.vercel.app/',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'REST API', 'Vercel', 'Circulation Engine'],
+    category: 'Full-Stack',
+    featured: true,
+    architectureHighlights: [
+      'Catalog indexing with instant full-text filtering by title, author, category, and ISBN',
+      'Automated circulation state machine managing checkouts, returns, and overdue calculations',
+      'Patron account portal for active loans, reservation requests, and borrowing history',
+      'High-performance responsive UI deployed on Vercel with smooth interactive workflows'
     ]
   },
   {
@@ -73,50 +149,12 @@ const projectsData: Project[] = [
     demo: 'https://icc-t20-worldcup-analytics.onrender.com/',
     tags: ['Node.js', 'Express', 'Chart.js', 'JavaScript', 'Render'],
     category: 'Data Analytics',
-    featured: true,
+    featured: false,
     architectureHighlights: [
       'Data parsing pipeline for multi-match tournament telemetry',
       'Dynamic Chart.js rendering for strike-rate and boundary frequency',
       'Head-to-head statistical engine and team efficiency matrix',
       'Lightweight server-side REST API with Render continuous deployment'
-    ]
-  },
-  {
-    id: 'ecommerce-analytics',
-    title: 'E-Commerce Sales & Customer Intelligence',
-    subtitle: 'RFM Segmentation & Sales Forecasting Pipeline',
-    description: 'End-to-end data analytics platform utilizing SQL and Python for RFM customer segmentation, seasonal sales forecasting, churn risk evaluation, and profit margin analysis.',
-    longDescription: 'Comprehensive customer intelligence solution processing transactional orders. Calculates recency, frequency, and monetary scores to categorize users into retention cohorts and forecasts quarterly sales volume.',
-    image: imgEcommerceAnalytics,
-    github: 'https://github.com/Matam-Rohith/ecommerce-sales-customer-analytics',
-    demo: 'https://matam-rohith.github.io/ecommerce-sales-customer-analytics/',
-    tags: ['Python', 'SQL', 'RFM Analysis', 'Sales Forecasting', 'Data Modeling'],
-    category: 'Data Analytics',
-    featured: true,
-    architectureHighlights: [
-      'RFM mathematical model segmenting high-value vs churn-risk customers',
-      'Trend regression algorithms estimating revenue seasonality',
-      'Structured SQL queries optimizing cohort calculations across large datasets',
-      'Interactive executive dashboard for stakeholder decision-making'
-    ]
-  },
-  {
-    id: 'ai-prompt-playground',
-    title: 'AI Prompt Engineering & Evaluation Suite',
-    subtitle: '7-Rule Analyzer & Prompt Optimization Engine',
-    description: 'Interactive IDE for crafting, benchmarking, and enhancing generative AI prompts with real-time heuristic scoring, automated clarification engines, and token analysis.',
-    longDescription: 'A developer utility designed to test and refine LLM prompts before production deployment. Analyzes prompt ambiguity, context completeness, role specification, output constraint enforcement, and suggests automated high-yield rewrites.',
-    image: imgPromptIde,
-    github: 'https://github.com/Matam-Rohith/ai-prompt-playground',
-    demo: 'https://matam-rohith.github.io/ai-prompt-playground/',
-    tags: ['JavaScript', 'HTML5', 'Prompt Engineering', 'GenAI Workflows'],
-    category: 'AI / ML',
-    featured: true,
-    architectureHighlights: [
-      '7-rule heuristic scoring engine with instant feedback',
-      'Automated semantic prompt expansion algorithm',
-      'Template benchmark library covering classification, extraction, and reasoning',
-      'Zero-dependency fast browser execution'
     ]
   },
   {
@@ -145,8 +183,8 @@ const projectsData: Project[] = [
     image: imgUrlShortener,
     github: 'https://github.com/Matam-Rohith/URL_Shortener',
     demo: 'https://url-shortener-na16.onrender.com/',
-    tags: ['Node.js', 'Express', 'JavaScript', 'Render API'],
-    category: 'Full-Stack',
+    tags: ['Node.js', 'Express', 'JavaScript', 'Render API', 'REST API'],
+    category: 'Backend',
     architectureHighlights: [
       'Base62 encoding pipeline for URL generation',
       'Collision prevention algorithm with rapid dictionary lookup',
@@ -171,23 +209,6 @@ const projectsData: Project[] = [
     ]
   },
   {
-    id: 'student-dashboard',
-    title: 'Student Academic Management Suite',
-    subtitle: 'GPA Calculator & Course Timetable Planner',
-    description: 'Client-side academic dashboard incorporating dynamic GPA calculations, attendance shortfall warnings, and schedule planner.',
-    longDescription: 'A comprehensive academic tracker empowering college students to calculate cumulative and semester GPAs, set target grades, and organize lecture timetables.',
-    image: imgStudentPortal,
-    github: 'https://github.com/Matam-Rohith/student-dashboard',
-    demo: 'https://matam-rohith.github.io/student-dashboard/',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage'],
-    category: 'Full-Stack',
-    architectureHighlights: [
-      'Credit-weighted GPA computation algorithms',
-      'Attendance warning threshold alert calculations',
-      'Offline-first localized storage architecture'
-    ]
-  },
-  {
     id: 'sms-spam-detection',
     title: 'NLP SMS Spam Classification Pipeline',
     subtitle: 'Machine Learning Text Classifier & Streamlit App',
@@ -203,38 +224,6 @@ const projectsData: Project[] = [
       'TF-IDF vector representation with optimal ngram range',
       'Precision-optimized classification for zero false-positive spam filtration',
       'Interactive Streamlit web deployment for real-time text testing'
-    ]
-  },
-  {
-    id: 'cancer-prediction-ml',
-    title: 'Clinical Cancer Risk Prediction Model',
-    subtitle: 'Supervised Machine Learning Diagnostic Suite',
-    description: 'Machine learning diagnostic classification model trained on clinical diagnostic features, incorporating feature selection and ROC-AUC evaluation.',
-    longDescription: 'Medical diagnostic modeling project evaluating supervised algorithms (Logistic Regression, Support Vector Machines, Decision Trees) to predict benign vs malignant diagnoses with high sensitivity.',
-    image: imgCancerMl,
-    github: 'https://github.com/Matam-Rohith/Cancer_Prediction',
-    tags: ['Python', 'scikit-learn', 'Pandas', 'Jupyter', 'Data Science'],
-    category: 'AI / ML',
-    architectureHighlights: [
-      'Exploratory data analysis identifying high-correlation cellular features',
-      'MinMax normalization and cross-validated train-test splits',
-      'Confusion matrix evaluation with emphasis on minimizing false negatives'
-    ]
-  },
-  {
-    id: 'bank-management',
-    title: 'Core Banking Ledger System',
-    subtitle: 'Java & JDBC Enterprise Banking Application',
-    description: 'Robust core banking transaction system managing customer accounts, deposit/withdrawal ledger operations, and Oracle DB integration with strict ACID compliance.',
-    longDescription: 'Java desktop and backend application communicating via JDBC to an Oracle relational database, featuring transaction rollbacks, account balance verification, and audit logs.',
-    image: imgBankLedger,
-    github: 'https://github.com/Matam-Rohith/Bank-Management-system',
-    tags: ['Java', 'JDBC', 'Oracle DB', 'SQL', 'ACID Transactions'],
-    category: 'Backend',
-    architectureHighlights: [
-      'JDBC connection pooling and prepared statement security',
-      'ACID transaction guarantees preventing balance overdrafts',
-      'Audit log tables recording all monetary transfers'
     ]
   },
   {
@@ -416,9 +405,9 @@ const Projects = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => setSelectedProject(project)}
-                      className="flex-1 text-xs h-8 rounded-xl border-slate-200 dark:border-slate-700 font-semibold hover:border-indigo-400"
+                      className="text-xs h-8 px-2.5 rounded-xl border-slate-200 dark:border-slate-700 font-semibold hover:border-indigo-400"
                     >
-                      Architecture
+                      Deep Dive
                     </Button>
 
                     {project.github && (
@@ -426,10 +415,11 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-400 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                        aria-label="View source code on GitHub"
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-400 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                        aria-label="View architecture on GitHub"
                       >
                         <Github className="w-3.5 h-3.5" />
+                        <span>Architecture</span>
                       </a>
                     )}
 
@@ -440,7 +430,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl shadow-sm hover:shadow-indigo-500/25 transition-all"
                       >
-                        Demo
+                        <span>Demo</span>
                         <ArrowUpRight className="w-3 h-3" />
                       </a>
                     )}
@@ -547,7 +537,7 @@ const Projects = () => {
                   className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-indigo-400 transition-colors"
                 >
                   <Github className="w-4 h-4" />
-                  View GitHub Repository
+                  View Architecture & Code (GitHub)
                 </a>
               )}
               {selectedProject.demo && (
@@ -558,7 +548,7 @@ const Projects = () => {
                   className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Launch Live Deployment
+                  Launch Live Demo
                 </a>
               )}
             </div>
